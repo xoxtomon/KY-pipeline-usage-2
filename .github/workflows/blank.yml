@@ -2,6 +2,8 @@
 name: My Project Pipeline
 
 on:
+  repository_dispatch:
+    types: [on-demand-repo-trigger]
   push:
     branches: [main, feature/**, qa]
   pull_request:
