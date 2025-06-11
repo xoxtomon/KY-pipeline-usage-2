@@ -1,0 +1,15 @@
+# .github/workflows/pipeline.yml in your main project
+name: My Project Pipeline
+
+on:
+  push:
+    branches: [main, feature/**, qa]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  
+jobs:
+  run-pipeline:
+    uses: xoxtomon/KY-pipeline-definition/.github/workflows/orchestrator.yml@main
+    with:
+      branch_name: ${{ github.ref_name }}
