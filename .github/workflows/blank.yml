@@ -15,3 +15,4 @@ jobs:
     uses: xoxtomon/KY-pipeline-definition/.github/workflows/orchestrator.yml@main
     with:
       branch_name: ${{ github.ref_name }}
+    secrets: inherit
